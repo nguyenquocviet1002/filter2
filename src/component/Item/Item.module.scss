@@ -1,0 +1,10 @@
+.item{
+    margin-bottom: 10px;
+    background-color: #c1daff;
+    border-radius: 15px;
+    text-align: left;
+    color: #000;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
