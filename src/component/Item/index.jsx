@@ -1,49 +1,33 @@
-import { useEffect, useState } from "react";
-import { removeAccented } from "../../utils/setup";
+import { useState } from "react";
 import Label from "../Label";
-import itemStyled from './Item.module.scss';
+import itemStyled from "./Item.module.scss";
 
-const Item = ({data}) => {
-    const [isDropdown, setIsDropdown] = useState(false);
-  const [level, setLevel] = useState([]);
+const Item = ({ data }) => {
+  const [isDropdown, setIsDropdown] = useState(false);
 
-  const {bo_luat, doi_tuong, muc_do, nhom_loi, lan_1, lan_2, lan_3, xu_ly} = data;
-
-  useEffect(() => {
-    if(lan_1){
-      setLevel(prev => ([...prev, lan_1]));
-    }
-    if(lan_2){
-      setLevel(prev => ([...prev, lan_2]));
-    }
-    if(lan_3){
-      setLevel(prev => ([...prev, lan_3]));
-    }
-  }, [lan_1, lan_2, lan_3]);
-
-  
+  const { title, year, revenue, genre } = data;
 
   const handleDropdown = () => {
     setIsDropdown(!isDropdown);
-  }
+  };
 
   return (
-    <div className={itemStyled['item']}>
+    <div className={itemStyled["item"]}>
       <div>
-        <Label label="Nội dung" value={bo_luat} />
+        <Label label="Tiêu đề: " value={title} />
         {isDropdown && (
           <>
-            <Label label="Đối tượng áp dụng" value={doi_tuong} />
-            <Label label="Mức độ" value={muc_do} color={removeAccented(muc_do) === 'nghiem trong' ? 'critical' : removeAccented(muc_do) === 'nang' ? 'high' : removeAccented(muc_do)  === 'trung binh' ? 'medium' : 'low' }/>
-            <Label label="Nhóm lỗi" value={nhom_loi} />
-            <Label label="Mức phạt" value={level} />
-            <Label label="Xử lý vi phạm nhiều lần/ Tình tiết tăng nặng" value={xu_ly} />
+            <Label label="Năm phát hành: " value={year} />
+            <Label label="Tổng doanh thu: " value={revenue} />
+            <Label label="Thể loại: " value={genre} />
           </>
         )}
       </div>
-      <div className={itemStyled['btn']} onClick={handleDropdown}>{isDropdown ? 'Thu gọn' : 'Chi tiết'}<span>&#10150;</span></div>
+      <div className={itemStyled["btn"]} onClick={handleDropdown}>
+        {isDropdown ? "Thu gọn" : "Chi tiết"}
+      </div>
     </div>
   );
-}
+};
 
-export default Item
+export default Item;

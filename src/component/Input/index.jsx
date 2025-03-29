@@ -1,8 +1,10 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useMemo } from "react";
 import inputStyled from "./Input.module.scss";
-import { shuffle } from "../../utils/setup";
+import { removeAccented } from "../../utils/setup";
 
 const Input = ({ ...props }) => {
+  const { placeholder, value, event, list } = props;
+
   const [isDropdown, setIsDropdown] = useState(false);
 
   const refDoctor = useRef(null);
@@ -22,25 +24,30 @@ const Input = ({ ...props }) => {
     };
   }, [refDoctor]);
 
+  const setList = useMemo(() => {
+    const newList = list.filter(item => removeAccented(item).includes(removeAccented(value)));
+    return newList.slice(0, 5);
+  }, [value, list])
+
   return (
     <div className={inputStyled["wrapper"]} ref={refDoctor}>
       <input
         type="text"
         className={inputStyled["input"]}
-        placeholder={props.placeholder}
-        onChange={(e) => props.event(e.target.value)}
-        value={props.value}
+        placeholder={placeholder}
+        onChange={(e) => event(e.target.value)}
+        value={value}
+        onFocus={() => setIsDropdown(true)}
       />
       {isDropdown && (
         <div className={inputStyled["dropdown"]}>
-          {shuffle(props.dropdown)
-            .slice(0, 5)
+          {setList
             .map((item) => (
               <div
                 className={inputStyled["item"]}
                 key={item}
                 onClick={() => {
-                  props.event(item);
+                  event(item);
                   setIsDropdown(false);
                 }}
               >

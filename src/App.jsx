@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { list } from "./data/getList";
-import { removeDuplicate, removeAccented } from "./utils/setup";
+import { removeAccented, removeDuplicate } from "./utils/setup";
 import List from "./component/List";
 import Input from "./component/Input";
 import Button from "./component/Button";
@@ -12,62 +12,45 @@ function App() {
   const initial = {
     title: "",
     year: "",
-    genre: "",
   };
 
-  const [dataOriginal, setDataOriginal] = useState([]);
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(initial);
-  const [isSearch, setIsSearch] = useState(false);
+  console.log("filter: ", filter);
+  const [title, setTitle] = useState([]);
   const [year, setYear] = useState([]);
-  console.log("year: ", year);
-  const [genres, setGenres] = useState([]);
-  console.log("genres: ", genres);
+
+  const DATA_ORIGINAL = list; // Assigning the original list to a constant
 
   useEffect(() => {
-    setDataOriginal(list);
-    setData(list);
+    setData(DATA_ORIGINAL);
 
-    const allYear = list.map((item) => {
-      return item.year;
-    });
-    setYear(removeDuplicate(allYear));
+    setTitle(DATA_ORIGINAL.map((item) => item.title));
 
-    const allGenres = [];
-    list.forEach((item) => {
-      allGenres.push(...item.genre);
-    });
-    const newAllGenres = removeDuplicate(allGenres);
-    setGenres(newAllGenres);
-  }, []);
+    const years = DATA_ORIGINAL.map((item) => item.year);
+    setYear(removeDuplicate(years));
+  }, [DATA_ORIGINAL]);
 
-  useEffect(() => {
-    if (dataOriginal.length > 0) {
-      let dataNew = [];
-      dataNew = dataOriginal.filter((item) => {
-        return item.year.includes(filter.year);
-      });
+  const filterOnchange = useMemo(() => {
+    let dataNew = DATA_ORIGINAL.filter((item) =>
+      removeAccented(item.title).includes(removeAccented(filter.title))
+    );
+    dataNew = dataNew.filter((item) =>
+      removeAccented(item.year).includes(removeAccented(filter.year))
+    );
+    return dataNew;
+  }, [filter, DATA_ORIGINAL]);
 
-      dataNew = dataNew.filter((item) => {
-        return item.genre.includes(filter.genre);
-      });
-
-      dataNew = dataNew.filter((item) => {
-        return item.title.includes(filter.title);
-      });
-      
-      setData(dataNew);
-    }
-  }, [filter.year, filter.genre, isSearch]);
-
- 
-
-  const handleSearch = () => {
-    setIsSearch(!isSearch);
+  const handleChangeSearch = (value) => {
+    setFilter((prev) => ({ ...prev, title: value }));
   };
 
-  const handleSelect1 = (e) => {
-    setFilter((prev) => ({ ...prev, nhom_loi: e.target.value }));
+  const handleChangeYear = (e) => {
+    setFilter((prev) => ({ ...prev, year: e.target.value }));
+  };
+
+  const handleClickSearch = () => {
+    setData(filterOnchange);
   };
 
   return (
@@ -75,51 +58,32 @@ function App() {
       <div className="container">
         <div className="filter_ksnb_1_0_0__center">
           <div className="filter_ksnb_1_0_0__aside">
-            <div className="filter_ksnb_1_0_0__label">
-              <div className="filter_ksnb_1_0_0__head">
-                <div className="filter_ksnb_1_0_0__icon">
-                  <img src={IMAGES.iconFilter} alt="" />
-                </div>
-                <div className="filter_ksnb_1_0_0__text">Lọc nâng cao</div>
-              </div>
-              {(filter.nhom_loi || filter.muc_do || filter.key) && (
-                <Button
-                  background="second"
-                  size="small"
-                  event={() => {
-                    setFilter(initial);
-                    setData(dataOriginal);
-                  }}
-                >
-                  Xóa lọc
-                </Button>
-              )}
-            </div>
             <div className="filter_ksnb_1_0_0__filter">
               <div className="filter_ksnb_1_0_0__search">
                 <Input
-                  placeholder="Nhập từ khóa tìm kiếm"
-                  value={filter.key}
+                  placeholder="Nhập tiêu đề"
+                  value={filter.title}
+                  event={handleChangeSearch}
+                  list={title}
                 />
                 <Button
                   icon={IMAGES.iconSearch}
-                  background="primary"
-                  event={handleSearch}
+                  background="search"
+                  event={handleClickSearch}
                 />
               </div>
               {
                 <Checkbox
-                  placeholder="Lỗi"
-                  label="Nhóm lỗi"
                   option={year}
-                  event={handleSelect1}
-                  value={filter.nhom_loi}
+                  placeholder="Năm phát hành"
+                  value={filter.year}
+                  event={handleChangeYear}
                 />
               }
             </div>
           </div>
           <div className="filter_ksnb_1_0_0__main">
-            {data && <List data={data} />}
+            {data.length > 0 && <List data={data} />}
           </div>
         </div>
       </div>

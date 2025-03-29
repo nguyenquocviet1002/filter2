@@ -5,9 +5,9 @@ export const list = [
         "year": "2009",
         "revenue": "$2,923,706,026",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim hoạt hình",
+            "Phim tâm lí",
+            "Phim bi kịch"
         ]
     },
     {
@@ -16,9 +16,9 @@ export const list = [
         "year": "2019",
         "revenue": "$2,797,501,328",
         "genre": [
-            "Phim bi kịch",
             "Phim hài",
-            "Phim ca nhạc"
+            "Phim hình sự",
+            "Phim tâm lý tình cảm"
         ]
     },
     {
@@ -27,9 +27,9 @@ export const list = [
         "year": "2022",
         "revenue": "$2,320,250,281",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim hành động",
+            "Phim tâm lí",
+            "Phim về chiến tranh"
         ]
     },
     {
@@ -38,9 +38,9 @@ export const list = [
         "year": "1997",
         "revenue": "$2,264,750,694",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim hành động",
+            "Phim phiêu lưu",
+            "Phim về chiến tranh"
         ]
     },
     {
@@ -49,9 +49,9 @@ export const list = [
         "year": "2015",
         "revenue": "$2,068,223,624",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim hành động",
+            "Phim phiêu lưu",
+            "Phim bi kịch"
         ]
     },
     {
@@ -60,8 +60,8 @@ export const list = [
         "year": "2018",
         "revenue": "$2,048,359,754",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
+            "Phim lịch sử, phim cổ trang",
+            "Phim về chiến tranh",
             "Phim ca nhạc"
         ]
     },
@@ -71,9 +71,9 @@ export const list = [
         "year": "2021",
         "revenue": "$1,921,847,111",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim tâm lý tình cảm",
+            "Phim tâm lý tình cảm",
+            "Phim hài"
         ]
     },
     {
@@ -82,9 +82,9 @@ export const list = [
         "year": "2024",
         "revenue": "$1,698,765,616",
         "genre": [
+            "Phim miền Tây",
             "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim kinh dị"
         ]
     },
     {
@@ -93,9 +93,9 @@ export const list = [
         "year": "2015",
         "revenue": "$1,671,537,444",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim tài liệu",
+            "Phim tâm lý tình cảm",
+            "Phim hình sự"
         ]
     },
     {
@@ -104,9 +104,9 @@ export const list = [
         "year": "2019",
         "revenue": "$1,656,943,394",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim lịch sử, phim cổ trang",
+            "Phim lịch sử, phim cổ trang",
+            "Phim hành động"
         ]
     },
     {
@@ -116,8 +116,8 @@ export const list = [
         "revenue": "$1,518,815,515",
         "genre": [
             "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim khoa học viễn tưởng",
+            "Phim tài liệu"
         ]
     },
     {
@@ -126,9 +126,9 @@ export const list = [
         "year": "2015",
         "revenue": "$1,515,341,399",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim tài liệu",
+            "Phim miền Tây",
+            "Phim hài"
         ]
     },
     {
@@ -137,9 +137,9 @@ export const list = [
         "year": "2022",
         "revenue": "$1,495,696,292",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim ca nhạc",
+            "Phim ca nhạc",
+            "Phim hài"
         ]
     },
     {
@@ -148,9 +148,9 @@ export const list = [
         "year": "2019",
         "revenue": "$1,450,026,933",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim tâm lý tình cảm",
+            "Phim về chiến tranh",
+            "Phim lịch sử, phim cổ trang"
         ]
     },
     {
@@ -159,9 +159,9 @@ export const list = [
         "year": "2023",
         "revenue": "$1,442,808,894",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim hành động",
+            "Phim về chiến tranh",
+            "Phim hình sự"
         ]
     },
     {
@@ -170,9 +170,9 @@ export const list = [
         "year": "2015",
         "revenue": "$1,402,809,540",
         "genre": [
-            "Phim bi kịch",
             "Phim hài",
-            "Phim ca nhạc"
+            "Phim lịch sử, phim cổ trang",
+            "Phim hài"
         ]
     },
     {
@@ -181,9 +181,9 @@ export const list = [
         "year": "2023",
         "revenue": "$1,358,188,035",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim ca nhạc",
+            "Phim khoa học viễn tưởng",
+            "Phim lịch sử, phim cổ trang"
         ]
     },
     {
@@ -192,9 +192,9 @@ export const list = [
         "year": "2018",
         "revenue": "$1,347,280,838",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim phiêu lưu",
+            "Phim hoạt hình",
+            "Phim miền Tây"
         ]
     },
     {
@@ -203,9 +203,9 @@ export const list = [
         "year": "2011",
         "revenue": "$1,342,499,744",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim về chiến tranh",
+            "Phim kinh dị",
+            "Phim tâm lý tình cảm"
         ]
     },
     {
@@ -214,9 +214,9 @@ export const list = [
         "year": "2024",
         "revenue": "$1,338,073,645",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim tâm lý tình cảm",
+            "Phim khoa học viễn tưởng",
+            "Phim hình sự"
         ]
     },
     {
@@ -225,9 +225,9 @@ export const list = [
         "year": "2017",
         "revenue": "$1,332,539,889",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim miền Tây",
+            "Phim khoa học viễn tưởng",
+            "Phim tâm lý tình cảm"
         ]
     },
     {
@@ -236,9 +236,9 @@ export const list = [
         "year": "2018",
         "revenue": "$1,310,469,037",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim phiêu lưu",
+            "Phim lịch sử, phim cổ trang",
+            "Phim hoạt hình"
         ]
     },
     {
@@ -247,9 +247,9 @@ export const list = [
         "year": "2013",
         "revenue": "$1,306,450,154",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim ca nhạc",
+            "Phim về chiến tranh",
+            "Phim khoa học viễn tưởng"
         ]
     },
     {
@@ -258,9 +258,9 @@ export const list = [
         "year": "2013",
         "revenue": "$1,266,152,644",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim ca nhạc",
+            "Phim về chiến tranh",
+            "Phim tâm lí"
         ]
     },
     {
@@ -269,9 +269,9 @@ export const list = [
         "year": "2017",
         "revenue": "$1,263,521,126",
         "genre": [
+            "Phim lịch sử, phim cổ trang",
             "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim tâm lí"
         ]
     },
     {
@@ -280,9 +280,9 @@ export const list = [
         "year": "2018",
         "revenue": "$1,242,805,359",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim kinh dị",
+            "Phim phiêu lưu",
+            "Phim hình sự"
         ]
     },
     {
@@ -291,8 +291,8 @@ export const list = [
         "year": "2017",
         "revenue": "$1,236,009,236",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
+            "Phim phiêu lưu",
+            "Phim hài dài tập",
             "Phim ca nhạc"
         ]
     },
@@ -302,9 +302,9 @@ export const list = [
         "year": "2015",
         "revenue": "$1,159,444,662",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim hoạt hình",
+            "Phim tâm lý tình cảm",
+            "Phim hình sự"
         ]
     },
     {
@@ -313,9 +313,9 @@ export const list = [
         "year": "2016",
         "revenue": "$1,153,337,496",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim phiêu lưu",
+            "Phim lịch sử, phim cổ trang",
+            "Phim miền Tây"
         ]
     },
     {
@@ -324,9 +324,9 @@ export const list = [
         "year": "2018",
         "revenue": "$1,148,528,393",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim tâm lí",
+            "Phim tâm lý tình cảm",
+            "Phim kinh dị"
         ]
     },
     {
@@ -335,9 +335,9 @@ export const list = [
         "year": "2003",
         "revenue": "$1,147,633,833",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim tâm lý tình cảm",
+            "Phim tâm lí",
+            "Phim bi kịch"
         ]
     },
     {
@@ -346,9 +346,9 @@ export const list = [
         "year": "2019",
         "revenue": "$1,131,927,996",
         "genre": [
-            "Phim bi kịch",
             "Phim hài",
-            "Phim ca nhạc"
+            "Phim khoa học viễn tưởng",
+            "Phim lịch sử, phim cổ trang"
         ]
     },
     {
@@ -357,9 +357,9 @@ export const list = [
         "year": "2019",
         "revenue": "$1,128,274,794",
         "genre": [
+            "Phim ca nhạc",
             "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim hình sự"
         ]
     },
     {
@@ -368,9 +368,9 @@ export const list = [
         "year": "2011",
         "revenue": "$1,123,794,079",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim hành động",
+            "Phim tài liệu",
+            "Phim tâm lí"
         ]
     },
     {
@@ -379,9 +379,9 @@ export const list = [
         "year": "2012",
         "revenue": "$1,108,569,499",
         "genre": [
-            "Phim bi kịch",
             "Phim hài",
-            "Phim ca nhạc"
+            "Phim lịch sử, phim cổ trang",
+            "Phim hài"
         ]
     },
     {
@@ -390,9 +390,9 @@ export const list = [
         "year": "2014",
         "revenue": "$1,104,054,072",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim hành động",
+            "Phim hoạt hình",
+            "Phim bi kịch"
         ]
     },
     {
@@ -401,9 +401,9 @@ export const list = [
         "year": "2012",
         "revenue": "$1,081,169,825",
         "genre": [
-            "Phim bi kịch",
             "Phim hài",
-            "Phim ca nhạc"
+            "Phim về chiến tranh",
+            "Phim hài dài tập"
         ]
     },
     {
@@ -412,9 +412,9 @@ export const list = [
         "year": "2019",
         "revenue": "$1,074,458,282",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim hoạt hình",
+            "Phim kinh dị",
+            "Phim kinh dị"
         ]
     },
     {
@@ -423,9 +423,9 @@ export const list = [
         "year": "2019",
         "revenue": "$1,074,144,248",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim miền Tây",
+            "Phim hình sự",
+            "Phim lịch sử, phim cổ trang"
         ]
     },
     {
@@ -435,8 +435,8 @@ export const list = [
         "revenue": "$1,073,394,593",
         "genre": [
             "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim tài liệu",
+            "Phim tâm lý tình cảm"
         ]
     },
     {
@@ -445,9 +445,9 @@ export const list = [
         "year": "2010",
         "revenue": "$1,066,970,811",
         "genre": [
-            "Phim bi kịch",
+            "Phim phiêu lưu",
             "Phim hài",
-            "Phim ca nhạc"
+            "Phim hình sự"
         ]
     },
     {
@@ -456,9 +456,9 @@ export const list = [
         "year": "2006",
         "revenue": "$1,066,179,747",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim về chiến tranh",
+            "Phim lịch sử, phim cổ trang",
+            "Phim tài liệu"
         ]
     },
     {
@@ -467,9 +467,9 @@ export const list = [
         "year": "2016",
         "revenue": "$1.057.420.387",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim tâm lí",
+            "Phim kinh dị",
+            "Phim phiêu lưu"
         ]
     },
     {
@@ -478,9 +478,9 @@ export const list = [
         "year": "2019",
         "revenue": "$1,050,693,953",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim phiêu lưu",
+            "Phim hình sự",
+            "Phim tâm lý tình cảm"
         ]
     },
     {
@@ -489,9 +489,9 @@ export const list = [
         "year": "2011",
         "revenue": "$1,045,713,802",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim hành động",
+            "Phim hành động",
+            "Phim hình sự"
         ]
     },
     {
@@ -500,9 +500,9 @@ export const list = [
         "year": "2017",
         "revenue": "$1,034,800,131",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim tâm lý tình cảm",
+            "Phim kinh dị",
+            "Phim khoa học viễn tưởng"
         ]
     },
     {
@@ -511,9 +511,9 @@ export const list = [
         "year": "1993",
         "revenue": "$1.034.199.003",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim hành động",
+            "Phim tâm lí",
+            "Phim tâm lý tình cảm"
         ]
     },
     {
@@ -522,9 +522,9 @@ export const list = [
         "year": "2016",
         "revenue": "$1,028,570,942",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim kinh dị",
+            "Phim khoa học viễn tưởng",
+            "Phim kinh dị"
         ]
     },
     {
@@ -533,9 +533,9 @@ export const list = [
         "year": "1999",
         "revenue": "$1,027,082,707",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim hình sự",
+            "Phim hoạt hình",
+            "Phim lịch sử, phim cổ trang"
         ]
     },
     {
@@ -544,9 +544,9 @@ export const list = [
         "year": "2010",
         "revenue": "$1,025,468,216",
         "genre": [
+            "Phim hoạt hình",
             "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim hình sự"
         ]
     },
     {
@@ -555,9 +555,9 @@ export const list = [
         "year": "2016",
         "revenue": "$1,023,784,195",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim kinh dị",
+            "Phim kinh dị",
+            "Phim về chiến tranh"
         ]
     },
     {
@@ -566,9 +566,9 @@ export const list = [
         "year": "2001",
         "revenue": "$1,024,466,594",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim hài dài tập",
+            "Phim miền Tây",
+            "Phim kinh dị"
         ]
     },
     {
@@ -577,9 +577,9 @@ export const list = [
         "year": "2012",
         "revenue": "$1,017,030,651",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim hoạt hình",
+            "Phim hài dài tập",
+            "Phim lịch sử, phim cổ trang"
         ]
     },
     {
@@ -588,9 +588,9 @@ export const list = [
         "year": "2008",
         "revenue": "$1,008,524,647",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim về chiến tranh",
+            "Phim ca nhạc",
+            "Phim tài liệu"
         ]
     },
     {
@@ -599,9 +599,9 @@ export const list = [
         "year": "2022",
         "revenue": "$1,001,978,080",
         "genre": [
-            "Phim bi kịch",
-            "Phim hài",
-            "Phim ca nhạc"
+            "Phim kinh dị",
+            "Phim về chiến tranh",
+            "Phim bi kịch"
         ]
     }
 ];
