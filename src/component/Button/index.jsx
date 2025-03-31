@@ -2,13 +2,10 @@ import React from "react";
 import buttonStyled from "./Button.module.scss";
 
 const Button = ({ ...props }) => {
-  const { children, icon, background, style, event, size } = props;
+  const { children, icon, background, event } = props;
   return (
     <button
-      className={`${buttonStyled["btn"]} ${buttonStyled[background]} ${
-        size ? buttonStyled[size] : ""
-      }`}
-      style={style}
+      className={`${buttonStyled["btn"]} ${buttonStyled[background]}`}
       onClick={event}
     >
       {children}

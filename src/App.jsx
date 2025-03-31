@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { list } from "./data/getList";
 import { removeAccented, removeDuplicate } from "./utils/setup";
 import List from "./component/List";
@@ -19,6 +19,7 @@ function App() {
   console.log("filter: ", filter);
   const [title, setTitle] = useState([]);
   const [year, setYear] = useState([]);
+  const [isSearch, setIsSearch] = useState(false);
 
   const DATA_ORIGINAL = list; // Assigning the original list to a constant
 
@@ -31,15 +32,15 @@ function App() {
     setYear(removeDuplicate(years));
   }, [DATA_ORIGINAL]);
 
-  const filterOnchange = useMemo(() => {
+  useEffect(() => {
     let dataNew = DATA_ORIGINAL.filter((item) =>
       removeAccented(item.title).includes(removeAccented(filter.title))
     );
     dataNew = dataNew.filter((item) =>
       removeAccented(item.year).includes(removeAccented(filter.year))
     );
-    return dataNew;
-  }, [filter, DATA_ORIGINAL]);
+    setData(dataNew);
+  }, [filter.year, isSearch, DATA_ORIGINAL]);
 
   const handleChangeSearch = (value) => {
     setFilter((prev) => ({ ...prev, title: value }));
@@ -50,8 +51,13 @@ function App() {
   };
 
   const handleClickSearch = () => {
-    setData(filterOnchange);
+    setIsSearch(!isSearch);
   };
+
+  const removeFilter = () => {
+    setFilter(initial);
+    setData(DATA_ORIGINAL);
+  }
 
   return (
     <div className="filter_ksnb_1_0_0">
@@ -80,6 +86,9 @@ function App() {
                   event={handleChangeYear}
                 />
               }
+              {(filter.title || filter.year) && (
+                <Button background="remove" event={removeFilter}>Xoá bộ lọc</Button>
+              )}
             </div>
           </div>
           <div className="filter_ksnb_1_0_0__main">
