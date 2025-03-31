@@ -1,4 +1,4 @@
-import labelStyled from "./label.module.scss";
+import labelStyled from "./Label.module.scss";
 
 const Label = ({ label, value }) => {
   return (
