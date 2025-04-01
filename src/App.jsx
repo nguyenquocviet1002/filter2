@@ -12,6 +12,7 @@ function App() {
   const initial = {
     title: "",
     year: "",
+    genre: "",
   };
 
   const [data, setData] = useState([]);
@@ -19,6 +20,7 @@ function App() {
   console.log("filter: ", filter);
   const [title, setTitle] = useState([]);
   const [year, setYear] = useState([]);
+  const [genre, setGenre] = useState([]);
   const [isSearch, setIsSearch] = useState(false);
 
   const DATA_ORIGINAL = list; // Assigning the original list to a constant
@@ -30,6 +32,12 @@ function App() {
 
     const years = DATA_ORIGINAL.map((item) => item.year);
     setYear(removeDuplicate(years));
+
+    const genres = [];
+    DATA_ORIGINAL.forEach((item) => {
+      genres.push(...item.genre);
+    });
+    setGenre(removeDuplicate(genres));
   }, [DATA_ORIGINAL]);
 
   useEffect(() => {
@@ -39,8 +47,14 @@ function App() {
     dataNew = dataNew.filter((item) =>
       removeAccented(item.year).includes(removeAccented(filter.year))
     );
+    dataNew = dataNew.filter((item) => {
+      const itemNonAccented = item.genre.map((keyWord) =>
+        removeAccented(keyWord)
+      );
+      return itemNonAccented.includes(removeAccented(filter.genre));
+    });
     setData(dataNew);
-  }, [filter.year, isSearch, DATA_ORIGINAL]);
+  }, [filter.year, filter.genre, isSearch, DATA_ORIGINAL]);
 
   const handleChangeSearch = (value) => {
     setFilter((prev) => ({ ...prev, title: value }));
@@ -50,6 +64,10 @@ function App() {
     setFilter((prev) => ({ ...prev, year: e.target.value }));
   };
 
+  const handleChangeGenre = (e) => {
+    setFilter((prev) => ({ ...prev, genre: e.target.value }));
+  };
+
   const handleClickSearch = () => {
     setIsSearch(!isSearch);
   };
@@ -57,7 +75,7 @@ function App() {
   const removeFilter = () => {
     setFilter(initial);
     setData(DATA_ORIGINAL);
-  }
+  };
 
   return (
     <div className="filter_ksnb_1_0_0">
@@ -79,15 +97,25 @@ function App() {
                 />
               </div>
               {
-                <Checkbox
-                  option={year}
-                  placeholder="Năm phát hành"
-                  value={filter.year}
-                  event={handleChangeYear}
-                />
+                <>
+                  <Checkbox
+                    option={year}
+                    placeholder="Năm phát hành"
+                    value={filter.year}
+                    event={handleChangeYear}
+                  />
+                  <Checkbox
+                    option={genre}
+                    placeholder="Thể loại"
+                    value={filter.genre}
+                    event={handleChangeGenre}
+                  />
+                </>
               }
-              {(filter.title || filter.year) && (
-                <Button background="remove" event={removeFilter}>Xoá bộ lọc</Button>
+              {(filter.title || filter.year || filter.genre) && (
+                <Button background="remove" event={removeFilter}>
+                  Xoá bộ lọc
+                </Button>
               )}
             </div>
           </div>

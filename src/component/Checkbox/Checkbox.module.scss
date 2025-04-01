@@ -57,24 +57,3 @@
 .label{
     font-weight: 600;
 }
-@media (max-width: 992px){
-    .select{
-        min-width: 170px;
-        max-width: 200px;
-    }
-}
-@media (max-width: 767px){
-    .selected{
-        &:first-child{
-            margin-right: 10px;
-            width: calc(50% - 10px);
-        }
-        width: 50%;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-    .select{
-        min-width: auto;
-        max-width: 100%;
-    }
-}
