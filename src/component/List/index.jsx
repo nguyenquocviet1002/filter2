@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Item from "../Item";
 import listStyled from "./List.module.scss";
 
@@ -6,6 +6,12 @@ const List = ({ data }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
   const [minPageNumberLimit, setMinPageNumberLimit] = useState(1);
+
+  useEffect(() => {
+    setCurrentPage(1);
+    setMaxPageNumberLimit(5);
+    setMinPageNumberLimit(1);
+  }, [data])
 
   const itemsPerPage = 10;
   const pageNumberLimit = 5;

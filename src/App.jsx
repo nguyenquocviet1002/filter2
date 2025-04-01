@@ -17,7 +17,6 @@ function App() {
 
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(initial);
-  console.log("filter: ", filter);
   const [title, setTitle] = useState([]);
   const [year, setYear] = useState([]);
   const [genre, setGenre] = useState([]);
@@ -41,20 +40,20 @@ function App() {
   }, [DATA_ORIGINAL]);
 
   useEffect(() => {
-    let dataNew = DATA_ORIGINAL.filter((item) =>
-      removeAccented(item.title).includes(removeAccented(filter.title))
-    );
-    dataNew = dataNew.filter((item) =>
-      removeAccented(item.year).includes(removeAccented(filter.year))
-    );
-    dataNew = dataNew.filter((item) => {
-      const itemNonAccented = item.genre.map((keyWord) =>
-        removeAccented(keyWord)
+    let dataNew = DATA_ORIGINAL;
+    if(filter.title){
+      dataNew = DATA_ORIGINAL.filter((item) =>
+        removeAccented(item.title).includes(removeAccented(filter.title))
       );
-      return itemNonAccented.includes(removeAccented(filter.genre));
-    });
+    };
+    if(filter.year){
+      dataNew = dataNew.filter((item) => item.year.includes(filter.year));
+    }
+    if(filter.genre){
+      dataNew = dataNew.filter((item) => item.genre.includes(filter.genre));
+    }
     setData(dataNew);
-  }, [filter.year, filter.genre, isSearch, DATA_ORIGINAL]);
+  }, [filter.year, filter.genre, isSearch]);
 
   const handleChangeSearch = (value) => {
     setFilter((prev) => ({ ...prev, title: value }));
